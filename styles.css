@@ -51,3 +51,323 @@ ul.nav__list {
 .menu-lines:hover .dropdown-menu{
     display: block;
 }
+
+
+.menu-lines:hover .menu-button{
+    background-color: transparent;
+}
+
+.dropdown-menu{
+    display:none;
+    position:absolute;
+    background-color: rgb(31, 31, 31);
+    border-radius: 0px 0px 20px 20px; /* This rounds the corner of the dropdown menu */ 
+    min-width: 135px;
+    min-height: 150px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* end of navigation */
+
+/* logo properties  */
+.logo, .logo2{
+    width: 68px;
+    height: 68px;
+    float: right;
+    padding: 10px 20px 10px 10px;
+}
+
+
+/* hide logo2 in the meantime */
+ .logo2{
+    display: none;
+}
+
+/* hide nav2 */
+nav2 {
+    display: none;
+}
+
+/* creating constant values */
+:root{ 
+    /* ff means font family */
+    --ff-headings: ; 
+    --ff-text: ; /* need to choose fonts*/
+
+    /* this is the font's weight */
+    --fw-reg: 300; 
+    --fw-bold: 900;
+    
+    /* this is the font's color */
+    --clr-white: #fff;
+    --clr-green: #80800094; 
+    --clr-pink: #ee84961a; 
+    --clr-midnight-green: #01141071;
+    --clr-beige: #F5F5DC;
+    --clr-dark-gray: #636363;
+    --clr-nav-gray: rgb(31, 31, 31);
+
+    /* this is the font's size*/
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-h4: 1rem;
+    --fs-body: 1rem;
+
+    /* this is for the img */ 
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+/* main styling portion */
+body {
+    background-color: var(--clr-white);
+    color: var(--clr-dark-gray);
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif; /* switch this for the desired body font */
+    font-size: var(--fs-body);
+    line-height: 1.6; /* change this value */
+}
+
+.section__title--education, .section__title--volunteering{
+    padding-top: 10px;
+}
+
+section {
+    padding:5em /* top and bottom */
+            2em ;/* left and right */
+}
+
+strong {
+    font-weight: bold ;
+}
+/* heading's settings */
+h1, h2, h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 {font-size: var(--fs-h1);}
+h2 {font-size: var(--fs-h2);}
+h3 {font-size: var(--fs-h3);}
+h4 {font-size: var(--fs-h4);}
+
+.section__title {
+    padding-bottom: .25em; 
+}
+
+.section__title--greeting{
+    font-weight: var(--fw-reg);
+}
+
+.section__title--greeting strong {
+    display: block;
+}
+
+.section__greeting {
+    margin: 0;
+    font-size: var(--fs-body);
+}
+
+.section__thanks--greeting {
+    margin-bottom: 1em;
+}
+
+.section__title--greeting {
+    font-family: var(--ff-text);
+}
+
+/* greeting */
+
+
+/* introduction */
+.introduction {
+    background-color: var(--clr-beige);
+}
+
+/* education */
+
+/* honors-&-awards */
+.honors-and-awards {
+    background-color: var(--clr-green);
+}
+
+/* skills */
+.skills {
+    background-color: var(--clr-pink);
+}
+
+/* footer */
+nav3 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: var(--clr-nav-gray);
+    text-align: center;
+    
+    
+}
+
+nav3 a {
+    color: white;
+    text-decoration: none;
+    
+}
+
+.link {
+    padding: 10px 10px 10px 10px;
+    
+}
+
+.link a:hover {
+    font-size: 105%;
+}
+
+.contact__button {
+    background-color: transparent;
+    font-family: var(--ff-text);
+    font-size: var(--fs-h4);
+}
+
+/*
+.footer .contact__button {
+    margin: auto;
+}
+*/
+
+.footer a:hover {
+    font-size: 115%;
+}
+
+.footer__link {
+    margin: auto;
+}
+
+/*
+.contact__button {
+    margin: auto;
+}
+*/
+
+/* img shadows */
+img {
+    display: block;
+    width: 100%; 
+    box-shadow: var(--bs);
+}
+
+/* This part of the test is what will change the website for an ipad: */
+@media only screen and (min-width: 600px) {
+
+    /* greeting */
+    .container1 {
+        display: flex;
+        /* border: 1px #ccc solid; */
+        padding: 10px;
+        align-items: center;
+        justify-content: center; 
+    }
+
+    .box1 {
+        padding: 5px;
+    }
+
+    /* education */
+    .container2 {
+        /* border: 1px #ccc solid; */
+        display: flex;
+        padding: 10px;
+        justify-content: space-around;
+        align-items: center;
+    }   
+
+    .box2 {
+        padding: 10px;
+    }
+
+    /* volunteering */
+    .container3 {
+        /* border: 1px #ccc solid; */
+        display: flex;
+        padding: 10px;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .box3 {
+        padding: 10px;
+    }
+
+    /* skills */
+    .container4 {
+        /* border: 1px #ccc solid; */
+        display: flex;
+        padding: 10px;
+        justify-content: space-around;
+        align-items: start;
+    }
+
+    .skill__coding__languages {
+        padding: 10px;
+        flex-basis: 30%;
+    }
+
+
+}
+
+@media only screen and (min-width: 800px) {
+    /* I want my fonts to get bigger at 800px */
+    :root { 
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-h4: 1.125rem;
+        --fs-body: 1.125rem;
+   } 
+
+   /* hide the old nav */
+    nav {
+        display: none;
+    }
+
+    /* show the new nav2*/
+    nav2 {
+        display: block;
+    }
+  
+    /* nav2 properties */
+   .nav__list2 li {
+       display: inline;
+       float: left;
+       padding: 0px 32px 10px 0px;
+       color: var(--clr-beige);
+   }
+   
+   nav2 {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(31, 31, 31);   
+   }
+
+   .nav__list2 li a {
+        color: white;
+        text-decoration: none;
+   }
+
+   .nav__list2  a:hover {
+        font-size: 110%;
+   }
+
+   .logo2 {
+       display: block;
+   }
+
+    
+}
+
+.greeting__img {
+    max-width: 500px;
+    max-height: 700px;
+}
