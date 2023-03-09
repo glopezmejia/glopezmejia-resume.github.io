@@ -1,2 +1,3 @@
 # glopezmejia-resume.github.io
-Created Project in ART 322 - Web Design at Bridgewater College
+Created this Online Resume in ART 322 - Web Design at Bridgewater College
+
